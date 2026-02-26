@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #ffd6eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 20px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.time-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.time-box div {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.time-box span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff0066;
+}
+
+.time-box p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #b30059;
+}
+
+.heart {
+    font-size: 60px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.heart:active {
+    transform: scale(1.2);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #b30059;
+    min-height: 50px;
+    padding: 0 10px;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 20px;
+    animation: float 2.5s linear forwards;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-250px); opacity: 0; }
+}
+
+.real-time {
+    font-size: 12px;
+    color: #b30059;
+    opacity: 0.7;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
