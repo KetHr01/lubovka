@@ -1,5 +1,5 @@
 // ВАША дата (рік, місяць-1, день, година, хвилина)
-const startDate = new Date(2025, 3, 11, 0, 0);
+const startDate = new Date(2025, 2, 11, 0, 0);
 
 function updateCounter() {
     const now = new Date();
@@ -73,4 +73,5 @@ function showLove() {
             heart.remove();
         }, 2500);
     }
+
 }
