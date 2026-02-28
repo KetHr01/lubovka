@@ -48,6 +48,30 @@ h1 {
     color: #b30059;
 }
 
+/* --- НОВЕ: РОКИ --- */
+.years-block {
+    grid-column: span 2;
+    display: none;
+}
+
+/* --- МОДАЛКА --- */
+.anniversary-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.anniversary-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    color: #b30059;
+}
+
 .heart {
     font-size: 60px;
     cursor: pointer;
@@ -84,4 +108,76 @@ h1 {
     font-style: italic;
     margin-top: -10px;
     margin-bottom: 20px;
+}
+
+/* Салют по боках */
+
+.firework {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1001;
+    animation: explode 900ms ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translate(var(--x), var(--y)) scale(0.3);
+        opacity: 0;
+    }
+}
+
+/* Нічний режим */
+
+body.night {
+    background: linear-gradient(to bottom, #1a0026, #330033);
+}
+
+body.night h1 {
+    color: #ff99cc;
+}
+
+.stars {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+.heart {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.background-heart {
+    position: fixed;
+    font-size: 18px;
+    opacity: 0.15;
+    animation: floatBg 12s linear infinite;
+    z-index: 0;
+}
+
+@keyframes floatBg {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-10vh); }
 }
