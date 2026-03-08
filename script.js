@@ -1,5 +1,5 @@
 // ВАША дата (рік, місяць-1, день, година, хвилина)
-const startDate = new Date(2025, 2, 11, 0, 0);
+const startDate = new Date(2025, 2, 8, 0, 0);
 
 let anniversaryShown = false;
 
@@ -216,4 +216,5 @@ function createBackgroundHearts() {
 }
 
 createBackgroundHearts();
+
 
